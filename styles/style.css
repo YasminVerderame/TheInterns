@@ -12,6 +12,11 @@
 
 header{
   padding: 15px 0;
+  display: flex;
+}
+
+.nav-item a {
+  text-decoration: none;
 }
 
 header .nav ul {
@@ -105,6 +110,7 @@ header .navbar-toggler {
 .itemsbp {
   max-width: 800px;
   margin: 0 auto;
+  margin-right: none ;
 }
 
 .itemsbp span {
@@ -1127,7 +1133,7 @@ input[type="submit"] {
   .banner h1 {
     margin-left: 100px;
     margin-top: 20px;
-    min-height: 115px;
+    min-height: 35px;
   }
 
   .banner h4 {
@@ -1371,7 +1377,7 @@ input[type="submit"] {
   }
 
   .customers .logo img {
-    max-height: 90px;
+    max-height: 76px;
   }
 
   .faq::before {
