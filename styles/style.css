@@ -1018,6 +1018,14 @@ input[type="submit"] {
 
 @media (max-width: 768px) {
 
+  .update-form {
+    flex-direction: column;
+  }
+
+  form {
+    width: 100%;
+  }
+
   .container {
     padding-left: 30px;
     padding-right: 30px;
