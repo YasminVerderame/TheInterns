@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="styles/style.css" rel="stylesheet">
   <script src="jquery.js" type="text/javascript"></script>
-  <script src="jquery.maskedinput.js" type="text/javascript"></script>
-  
   <link rel="stylesheet" href="./styles/bootstrap/bootstrap.min.css">
 </head>
 
@@ -18,7 +16,7 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div class="logo">
-            <a href="./index.html"><img  src="./assets/logos/1563334472wpdm_banco-pan-logo.svg" class="img-fluid" alt="Logo Banco Pan."></a>
+            <a href="./index.html"><img src="./assets/logos/Logo.jpg" class="img-fluid" alt="Logo Banco Pan."></a>
           </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,10 +24,10 @@
           </button>
           <div class="collapse navbar-collapse nav" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item"><a href="./cliente-area.html"><button class="client">Área do cliente</button></a>
+              <li class="nav-item"><a href="./cliente-area.html"><button class="client">Exemplo Recadastro</button></a>
               </li>
-              <li class="nav-item"><a href="./new-client.html"><button style="background-color: #00C5FF">Abrir
-                    conta</button></a></li>
+              <li class="nav-item"><a href="./new-client.html"><button style="background-color: #00C5FF">Exemplo
+                    Cadastro</button></a></li>
             </ul>
           </div>
         </div>
@@ -190,7 +188,7 @@
   <section id="padronizacao" class="more-info">
     <div class="background">
       <div class="pages" id="padronizacao">
-        <div class="container">
+        <div class="container center-padron">
           <div class="row" style="margin-bottom: 70px;">
             <h2 class="pages-title">Despadronização dos Dados</h2>
             <p class="pages-p">Agora, focando na despadronização dos dados (quando os usuários inserem o mesmo tipo de
@@ -201,7 +199,8 @@
               <img src="./assets/images/rest.svg" alt="" class="img-fluid">
             </div>
             <div class="col-md-6">
-              <p class="padronizacao-item-p"> <span class="padronizacao-item-title">Padronização dos Documentos</span><br><br>
+              <p class="padronizacao-item-p"> <span class="padronizacao-item-title">Padronização dos
+                  Documentos</span><br><br>
 
                 Tratando dos documentos, começando pelo CPF, verificaremos sua validez através de seus dígitos. Já
                 outros documentos (RG e CNH) serão validados através de fotos tiradas pelo próprio cliente feitas com
@@ -211,7 +210,8 @@
           </div>
           <div class="row row-column-reverse-mobile" style="margin-bottom: 70px;">
             <div class="col-md-6">
-              <p class="padronizacao-item-p"> <span class="padronizacao-item-title">Inteligência Artificial</span><br><br>
+              <p class="padronizacao-item-p"> <span class="padronizacao-item-title">Inteligência
+                  Artificial</span><br><br>
 
                 Isso será feito por meio de uma inteligência artificial criada com Python, que receberá o documento
                 escolhido pelo cliente, extrairá os dados desses, e cadastrar no banco. Só que, antes disso, será
@@ -236,7 +236,8 @@
           </div>
           <div class="row row-column-reverse-mobile" style="margin-bottom: 110px;">
             <div class="col-md-6">
-              <p class="padronizacao-item-p"> <span class="padronizacao-item-title">Validação de Endereços</span><br><br>
+              <p class="padronizacao-item-p"> <span class="padronizacao-item-title">Validação de
+                  Endereços</span><br><br>
 
                 Por último, no endereço, utilizaremos a API ViaCEP que valida o CEP e, caso exista, retorna dados
                 complementares do mesmo, restando ao cliente apenas inserir o número e complemento.
@@ -249,7 +250,8 @@
 
           <h2 class="pages-title" style="text-align: center;">Transação de dados para o Banco de Dados</h2>
           <span class="detail"></span>
-          <p class="pages-transacao" style="text-align: center;">Para enviar esses dados para o banco de dados, usaremos REST
+          <p class="pages-transacao" style="text-align: center;">Para enviar esses dados para o banco de dados, usaremos
+            REST
             APIs, que são requisições que
             permitem a comunicação de dados entre aplicações.
           </p>
@@ -264,7 +266,7 @@
       <div class="pages" id="etl">
         <div class="container">
           <div class="row" style="margin-bottom: 70px;">
-            <h2 class="pages-title" style="text-align: center;">ETL</h2>
+            <h2 class="pages-title" style="text-align: center; margin-top: 4rem;">ETL</h2>
             <p class="pages-p" style="text-align: center;">Processo de ETL para que o PAN não perca dados de seus
               clientes cadastrados na Cli360.
               Formulário de confirmação de dados e o enviaremos para todos clientes da base antiga via push.</p>
@@ -273,7 +275,8 @@
                 class="img-fluid">
             </div>
             <div class="col-md-6 item-etl">
-              <p> <span>Padronização dos Documentos</span><br><br>
+              <p class="padronizacao-item-p"> <span style="color: #FF5630;" class="padronizacao-item-title">Padronização
+                  dos Documentos</span><br><br>
                 Clientes que responderem terão seus dados cadastrados na nova base e, além disso, esses serão enviados
                 para a AWS Glue como parâmetro de ETL, visando a recuperação de registros de contratações. Esses
                 registros, caso encontrados, serão extraídos, transformados (para se adequarem às novas regras de
@@ -283,7 +286,8 @@
           </div>
           <div class="row row-column-reverse-mobile" style="margin-bottom: 70px;">
             <div class="col-md-6 item-etl">
-              <p> <span>Inteligência Artificial</span><br><br>
+              <p class="padronizacao-item-p"> <span class="padronizacao-item-title" style="color: #FF5630;">Inteligência
+                  Artificial</span><br><br>
                 Em relação aos clientes que não responderem o formulário após um grande período de tempo, utilizaremos
                 seus dados como parâmetro de consultas na ‘SERPRO’, uma API que acessa e retorna dados de pessoas
                 registrados na base da receita federal por uma determinada quantia.</p>
@@ -299,45 +303,33 @@
 
   </section>
 
-  <section class="video">
+  <div class="download" id="planos">
     <div class="container">
-      <h3>Faça download dos documentos completos com a nossa proposta mais detalhada!</h3>
       <div class="row">
-        <div class="col">
-          <div class="slider slider-video">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="slide">
-                  <a href="./assets/files/Documentacao.pdf"><button class="btn-download">Download
-                      Documentação</button></a>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="slide">
-                  <a href="./assets/files/script-ddl.txt"><button class="btn-download">Download do DDL</button></a>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="slide">
-                  <a href="./assets/files/diagrama.pdf"><button class="btn-download">Download do Diagrama</button></a>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="slide">
-                  <a href="./assets/files/apresentação the interns.pdf"><button class="btn-download">Download da
-                      Apresentação</button></a>
-                </div>
-              </div>
-            </div>
+        <div class="col center">
+          <h2 class="download-title"><span class="azul">Quer</span> conhecer <br> <span class="azul">mais </span>sobre a
+            nossa <span class="azul">proposta?!</span></h2>
+          <p class="download-paragrafo">Faça o <span>download</span> dos documentos <span>completos</span> com a nossa
+            prosta <span>mais
+              detalhada!</span></p>
+          <div class="buttons-download">
+            <a href="/assets/files/Documentacao.pdf"><button>Download Documentação</button></a>
+            <a href="/assets/files/script-ddl.txt"><button>Download do DDL</button></a>
+            <a href="/assets/files/diagrama.pdf"><button>Download do Diagrama</button></a>
+            <a href="/assets/files/apresentação the interns.pdf"><button>Download do PPT</button></a>
           </div>
-          <h2>Quer conhecer mais sobre nossa proposta? Assista o vídeo.</h2>
-          <!-- <p class="mobile-only">Entenda as vantagens de ter um Número Oficial com o Mutant Whats</p> -->
-          <iframe width="100%" height="515" src="https://www.youtube.com/embed/bAVinJoEOZU" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+
+  <div class="video">
+    <h2 class="video-title">Assista ao nosso Pitch!</h2>
+    <iframe width="100%" height="515" src="https://www.youtube.com/embed/bAVinJoEOZU" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+
   <section class="benefits">
     <div class="container">
       <div class="table-default">
@@ -498,7 +490,7 @@
               </div>
             </div>
           </section> -->
-      <a href="#" id="link-topo" title="Clique para voltar ao topo">&#9650;</a>
+  <a href="#" id="link-topo" title="Clique para voltar ao topo">&#9650;</a>
   <footer>
     <div class="container">
       <ul>
@@ -507,11 +499,6 @@
       </ul>
     </div>
   </footer>
-
-
-  <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="./js/main.js"></script>
-
 
 </body>
 

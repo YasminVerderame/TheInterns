@@ -2,21 +2,89 @@ function ValidaCPF() {
     var cpfValido = /^(([0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2})|([0-9]{11}))$/;
 }
 
+function maskCEP(cep) {
+    let cepValido = /^[0-9]{5}-[0-9]{3}$/;
+}
+
 function cpfCheck(el) {
     const element = document.getElementById('cpf').value;
 
-    console.log(element);
     if (element === '') {
         document.getElementById('isValidCPF').style.display = 'none';
         return;
     }
-    if (!is_cpf(el.value)) {
-        document.getElementById('isValidCPF').style.display = 'block';
-    } else if (is_cpf(el.value)) {
-        document.getElementById('isValidCPF').style.display = 'none';
-    }
+
+    !is_cpf(el.value) ? document.getElementById('isValidCPF').style.display = 'block' : document.getElementById('isValidCPF').style.display = 'none';
+
 }
 
+function mask(o, f) {
+    setTimeout(function () {
+        var v = mphone(o.value);
+        if (v != o.value) {
+            o.value = v;
+        }
+    }, 1);
+}
+
+function mphone(v) {
+    var r = v.replace(/\D/g, "");
+    r = r.replace(/^0/, "");
+    if (r.length > 10) {
+        r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+    } else if (r.length > 5) {
+        r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+    } else if (r.length > 2) {
+        r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+    } else {
+        r = r.replace(/^(\d*)/, "($1");
+    }
+    return r;
+}
+
+function mascara(i, t) {
+
+    var v = i.value;
+
+    if (isNaN(v[v.length - 1])) {
+        i.value = v.substring(0, v.length - 1);
+        return;
+    }
+
+    if (t == "data") {
+        i.setAttribute("maxlength", "10");
+        if (v.length == 2 || v.length == 5) i.value += "/";
+    }
+
+    if (t == "cpf") {
+        i.setAttribute("maxlength", "14");
+        if (v.length == 3 || v.length == 7) i.value += ".";
+        if (v.length == 11) i.value += "-";
+    }
+
+    if (t == "cnpj") {
+        i.setAttribute("maxlength", "18");
+        if (v.length == 2 || v.length == 6) i.value += ".";
+        if (v.length == 10) i.value += "/";
+        if (v.length == 15) i.value += "-";
+    }
+
+    if (t == "cep") {
+        i.setAttribute("maxlength", "9");
+        if (v.length == 5) i.value += "-";
+    }
+
+    if (t == "tel") {
+        if (v[0] == 9) {
+            i.setAttribute("maxlength", "10");
+            if (v)
+                if (v.length == 5) i.value += "-";
+        } else {
+            i.setAttribute("maxlength", "9");
+            if (v.length == 4) i.value += "-";
+        }
+    }
+}
 // Valida CPF
 
 function is_cpf(c) {
@@ -117,10 +185,10 @@ function pesquisacep(valor) {
         if (validacep.test(cep)) {
 
             //Preenche os campos com "..." enquanto consulta webservice.
-            document.getElementById('rua').value = "...";
-            document.getElementById('bairro').value = "...";
-            document.getElementById('cidade').value = "...";
-            document.getElementById('uf').value = "...";
+            document.getElementById('rua').value = "Consultando cep...";
+            document.getElementById('bairro').value = "Consultando cep...";
+            document.getElementById('cidade').value = "Consultando cep...";
+            document.getElementById('uf').value = "Consultando cep...";
 
             //Cria um elemento javascript.
             var script = document.createElement('script');

@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap%27');
 
-body {
+* {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -36,7 +36,7 @@ header .nav ul button {
   font-weight: 700;
   line-height: 17px;
   width: 180px;
-  height: 40px;
+  height: 50px;
   color: #fff;
   text-transform: uppercase;
   border: 0px;
@@ -55,8 +55,6 @@ header .navbar-toggler {
   border: 0;
 }
 
-
-
 #isValidCPF {
   color: red;
   font-weight: 600;
@@ -68,7 +66,7 @@ header .navbar-toggler {
   text-decoration: none;
   color: white;
   background-color: #00C5FF;
-  padding: 0.625rem 0.780rem;
+  padding: 0.725rem 0.980rem;
   position: fixed;
   right: 0.725rem;
   bottom: 0.625rem;
@@ -77,8 +75,60 @@ header .navbar-toggler {
   border-radius: 6px;
 }
 
+.plans {
+  padding-top: 0px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 #link-topo:hover {
   background-color: #29B6F6;
+}
+
+.center {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.buttons-download button {
+  width: 260px;
+  height: 62px;
+  margin-right: 17px;
+  background: #00C5FF;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 0px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.download-title {
+  margin-top: 20px;
+  color: #333333;
+  font-weight: 700;
+  font-size: 45px;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.download-paragrafo span{
+  font-weight: 600;
+}
+.azul {
+  color: #00C5FF;
+}
+
+.buttons-download {
+  display: flex;
 }
 
 .banner {
@@ -271,6 +321,18 @@ header .navbar-toggler {
   text-align: center;
 }
 
+.download-paragrafo {
+  max-width: 700px;
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: #4F4C4D;
+  text-align: center;
+}
+
 .plans .items {
   max-width: 1050px;
   margin: 0 auto;
@@ -402,7 +464,9 @@ header .navbar-toggler {
 }
 
 .padronizacao-item-title {
-  color: #00C5FF;
+  color: #01579B;
+  font-size: 25px !important;
+  font-weight: 600 !important;
 }
 
 .pages-title {
@@ -422,7 +486,7 @@ header .navbar-toggler {
   margin-bottom: 4rem;
 }
 
-.container {
+.center-padron {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -435,7 +499,7 @@ header .navbar-toggler {
 }
 
 .more-info {
-  background-color: #1E9EB7;
+  background-color: #29B6F6;
   margin-top: 20px;
   padding-top: 50px;
 }
@@ -497,9 +561,8 @@ span.detail {
   background: #1E9EB7;
 }
 
-.video video {
-  max-width: 862px;
-  width: 100%;
+iframe {
+  width: 70%;
   margin-bottom: 50px;
   margin-top: 30px;
 }
@@ -528,18 +591,6 @@ span.detail {
 .video .item p {
   margin-top: 20px;
   overflow-wrap: break-word;
-}
-
-.video button {
-  background: #95EF76;
-  border-radius: 15px;
-  width: 262px;
-  height: 48px;
-  text-transform: uppercase;
-  border: 0px;
-  color: #751BB1;
-  font-weight: 700;
-  margin-top: 50px;
 }
 
 .video p.mobile-only {

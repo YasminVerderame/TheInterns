@@ -58,12 +58,13 @@
       <p id="isValidCPF">CPF Inválido. Favor verificar.</p>
 
       <div class="input-group">
-        <input type="date" placeholder="Data de nascimento" class="input" required mask="00/00/0000">
+        <input type="text" placeholder="Data de nascimento" class="input" required oninput="mascara(this, 'data')">
         <span class="border-bottom"></span>
       </div>
 
       <div class="input-group">
-        <input type="text" placeholder="Telefone" class="input" required maxlength="15" mask="(00) 00000-0000">
+        <input type="text" placeholder="Telefone" class="input" required  id="phone"
+        onkeypress="mask(this, mphone);" onblur="mask(this, mphone);">
         <span class="border-bottom"></span>
       </div>
 
@@ -83,7 +84,7 @@
       <h4>Endereço</h4>
       <div class="input-group">
         <input type="text" placeholder="CEP" class="input" name="cep" type="text" id="cep" value="" size="10"
-          maxlength="9" onblur="pesquisacep(this.value);">
+          maxlength="9" onblur="pesquisacep(this.value);" oninput="mascara(this, 'cep')">
         <span class="border-bottom"></span>
       </div>
 
@@ -111,9 +112,9 @@
         <input type="text" placeholder="Número" class="input" id="ibge" size="8">
         <span class="border-bottom"></span>
       </div>
-      
+
       <div class="input-group">
-        <input type="text" placeholder="Número" class="input" id="ibge" size="8" disabled>
+        <input type="text" placeholder="Complemento" class="input" id="ibge" size="8" disabled>
         <span class="border-bottom"></span>
       </div>
 
