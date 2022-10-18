@@ -221,7 +221,7 @@ function pesquisacep(valor) {
         else {
             //cep é inválido.
             limpa_formulário_cep();
-            alert("Formato de CEP inválido.");
+            document.getElementById('isValidCEP').style.display = 'block';
         }
     } //end if.
     else {
