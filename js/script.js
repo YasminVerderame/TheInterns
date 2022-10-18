@@ -15,10 +15,10 @@ function validaEmails() {
     const email = document.getElementById('email').value;
     const confirmaEmail = document.getElementById('emailConfirma').value;
 
-    if (email === '' || confirmaEmail === '')
+    if (email.toLowerCase() === '' || confirmaEmail.toLowerCase() === '')
         document.getElementById('confirmEmail').style.display = 'none';
 
-    email !== confirmaEmail ? document.getElementById('confirmEmail').style.display = 'block' : document.getElementById('confirmEmail').style.display = 'none';
+    email.toLowerCase() !== confirmaEmail.toLowerCase() ? document.getElementById('confirmEmail').style.display = 'block' : document.getElementById('confirmEmail').style.display = 'none';
 
 }
 
