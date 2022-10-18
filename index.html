@@ -1,387 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="styles/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="./styles/bootstrap/bootstrap.min.css">
-    </head>
-    <body>
-        <header>
-            <div class="container">
-              <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                  <div class="logo">
-                    <img src="./assets/logos/1563334472wpdm_banco-pan-logo.svg" class="img-fluid" alt="Logo Partner Mutant">
-                  </div>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse nav" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a href="./cliente-area.html"><button class="client">Área do cliente</button></a></li>
-                        <li class="nav-item"><a href="./new-client.html"><button style="background-color: #00C5FF">Abrir conta</button></a></li>
-                    </ul> 
-                  </div>
-                </div>
-              </nav>
-            </div>  
-        </header>
 
-        <section class="banner">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4">
-                  <h1>The Interns</h1>
-                  <ul>
-                      <li>Felipe Otto <span>89108</span> </li>
-                      <li>Pedro Argentati <span>88246</span></li>
-                      <li>Pedro Henrique Castanheira <span>89199</span></li>
-                      <li>Rafael Tannous <span>87486</span></li>
-                      <li>Yasmin Verderame <span>87023</span> </li>
-                  </ul>
-                  
-                </div>
-               
-                <div class="col imagem-mobile">
-                    <img class="img-group" src="../../../assets/images/undraw_team_collaboration_re_ow29.svg" alt="">
-                  </div>
-              </div>
-            </div>
-          </section>
+<head>
+  <title>The Interns</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="styles/style.css" rel="stylesheet">
+  <script src="jquery.js" type="text/javascript"></script>
+  <script src="jquery.maskedinput.js" type="text/javascript"></script>
+  
+  <link rel="stylesheet" href="./styles/bootstrap/bootstrap.min.css">
+</head>
 
-          <section class="why-answer-by-whatsapp">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <h2>Conheça nossa proposta</h2>
-                </div>
-              </div>
-              <div class="slider slider-why-answer-by-whatsapp">
-                <div class="row">
-                    <div class="col-md-3">
-                      <div class="slide">
-                        <a href="#banco-dados"><button class="item"> Banco de dados</button></a>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="slide">
-                        <a href="#cloud"><button class="item">Cloud</button></a>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="slide">
-                        <a href="#padronizacao"><button class="item">Padronização</button></a>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-3">
-                        <div class="slide">
-                            <a href="#etl"><button class="item">ETL</button></a>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <span class="btn btn-next" onclick="nextSlide(2)"><img src="./assets/icons/next.svg" alt=""></span>
-                <span class="btn btn-prev" onclick="prevSlide(2)"><img src="./assets/icons/prev.svg" alt=""></span>
-              </div> 
-            </div>
-          </section>
-
-          <section class="plans" id="plans">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <h2 id="banco-dados">Banco de Dados</h2>
-                  <p>A primeira etapa de nossa proposta será criar uma <span>nova base de dados SQL
-                    Server na nuvem</span>.
-                  Modelamos sua estrutura tornando-a totalmente normalizada, evitando assim redundâncias, inconsistências e
-                  possibilitando futuros crescimentos.</p>
-                </div>
-              </div>
-              <div class="items slider slider-plans">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="slide">
-                      <div class="item light">
-                        <h3>SQL Server</h3>
-                        <span class="detail"></span>
-                        <ul>
-                            <li><span>Manutenção: </span>As tabelas armazenam índice - organizado.</li>
-                            <li><span>Proteção: </span>Logins autenticados no nível da instância e no banco de dados.</li>
-                            <li><span>Suporte: </span>Fornece notas técnicas, descrições de erros, scripts, sem custo adicional.
-                            </li>
-                            <li><span>Backup: </span>Permite backups completos, parciais e incrementais</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="slide">
-                      <div class="item light">
-                        <h3>Oracle</h3>
-                        <span class="detail"></span>
-                        <ul>
-                            <li><span>Manutenção: </span>Atualização estatística automática</li>
-                            <li><span>Proteção: </span>Usuário autenticado via token de banco de dados</li>
-                            <li><span>Suporte: </span>Chamada de suporte cobrada por cada caso de suporte.</li>
-                            <li><span>Backup: </span>Backups de BD completos, nível de arquivo, incrementais e diferenciais.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <span class="btn btn-next" onclick="nextSlide(3)"><img src="./assets/icons/next.svg" alt=""></span>
-                <span class="btn btn-prev" onclick="prevSlide(3)"><img src="./assets/icons/prev.svg" alt=""></span>
-              </div>
-            </div>
-          </section>
-
-          <section class="how-it-works">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <h2 id="cloud">Cloud Banco PAN</h2>
-                  <p>Como citado, iremos criar uma nova database já em nuvem e o serviço que utilizaremos é o Cloud SQL for SQL Server da Google. Comparamos as pioneiras da Cloud Computing e, além de ter o preço mais acessível, atende a todas as necessidades que o banco Pan necessita, como:</p>
-                </div>
-              </div>
-              <div class="items">
-                <div class="item">
-                  <div class="icon">
-                  </div>
-                  <p>Disponibilidade</p>
-                </div>
-                <div class="item">
-                  <div class="icon">
-                  </div>
-                  <p>Disaster Recovery</p>
-                </div>
-                <div class="item">
-                  <div class="icon notebook">
-                  </div>
-                  <p>Escalabilidade</p>
-                </div>
-                <div class="item">
-                  <div class="icon">
-                  </div>
-                  <p>Segurança</p>
-                </div>
-                <div class="item">
-                  <div class="icon">
-                  </div>
-                  <p>Preços</p>
-                </div>
-              </div>
-            </div>
+<body>
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <div class="logo">
+            <a href="./index.html"><img  src="./assets/logos/1563334472wpdm_banco-pan-logo.svg" class="img-fluid" alt="Logo Banco Pan."></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse nav" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="./cliente-area.html"><button class="client">Área do cliente</button></a>
+              </li>
+              <li class="nav-item"><a href="./new-client.html"><button style="background-color: #00C5FF">Abrir
+                    conta</button></a></li>
+            </ul>
+          </div>
         </div>
-        </section>
-        <section id="padronizacao" class="more-info">
-            <div class="background">
-                <div class="pages" id="padronizacao">
-                  <div class="container">
-                    <div class="row" style="margin-bottom: 70px;">
-                      <h2 class="pages-title">Despadronização dos Dados</h2>
-                      <p class="pages-p">Agora, focando na despadronização dos dados (quando os usuários inserem o mesmo tipo de
-                        informação de
-                        maneiras distintas), iremos fazer uma validação no front end da aplicação, utilizando máscaras, para que
-                        essas cheguem no back-end já normalizados.</p>
-                      <div class="col-md-6">
-                        <img  src="./assets/images/undraw_filing_system_re_56h6.svg" alt="" class="img-fluid">
-                      </div>
-                      <div class="col-md-6">
-                        <p> <span>Padronização dos Documentos</span><br><br>
-          
-                          Tratando dos documentos, começando pelo CPF, verificaremos sua validez através de seus dígitos. Já
-                          outros documentos (RG e CNH) serão validados através de fotos tiradas pelo próprio cliente feitas com
-                          reconhecimento de imagem.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="row row-column-reverse-mobile" style="margin-bottom: 70px;">
-                      <div class="col-md-6">
-                        <p> <span>Inteligência Artificial</span><br><br>
-          
-                          Isso será feito por meio de uma inteligência artificial criada com Python, que receberá o documento
-                          escolhido pelo cliente, extrairá os dados desses, e cadastrar no banco. Só que, antes disso, será
-                          exposto para o usuário um formulário com todos os dados inseridos para serem confirmados.</p>
-                      </div>
-                      <div class="col-md-6">
-                        <img src="./assets/images/undraw_artificial_intelligence_re_enpp (1).svg" alt="" class="img-fluid">
-                      </div>
-                    </div>
-                    <div class="row" style="margin-bottom: 125px;">
-                      <div class="col-md-6">
-                        <img src="./assets/images/undraw_two_factor_authentication_namy.svg" alt="" class="img-fluid">
-                      </div>
-                      <div class="col-md-6">
-                        <p> <span>Autenticação</span><br><br>
-          
-                          Em relação ao e-mail e telefone, utilizaremos o método de autenticação JWT (JSON Web Token). Após ter um
-                          login e senha validados pelo servidor, será criado um token que o usuário receberá em resposta e que
-                          permitirá o acesso a algum recurso. Essas informações são mantidas na máquina do cliente, e não no
-                          servidor (Stateless).</p>
-                      </div>
-                    </div>
-                    <div class="row row-column-reverse-mobile" style="margin-bottom: 110px;">
-                      <div class="col-md-6">
-                        <p> <span>Validação de Endereços</span><br><br>
-          
-                          Por último, no endereço, utilizaremos a API ViaCEP que valida o CEP e, caso exista, retorna dados
-                          complementares do mesmo, restando ao cliente apenas inserir o número e complemento.
-                        </p>
-                      </div>
-                      <div class="col-md-6">
-                        <img src="./assets/images/undraw_tourist_map_re_293e.svg" alt="" class="img-fluid">
-                      </div>
-                    </div>
-          
-                    <h2 class="pages-title" style="text-align: center;">Transação de dados para o Banco de Dados</h2>
-                    <p class="pages-p"  style="text-align: center;">Para enviar esses dados para o banco de dados, usaremos REST APIs, que são requisições que
-                      permitem a comunicação de dados entre aplicações.
-                    </p>
-                  </div>
-                </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h1>The Interns</h1>
+          <ul>
+            <li>Felipe Otto <span>89108</span> </li>
+            <li>Pedro Argentati <span>88246</span></li>
+            <li>Pedro Henrique Castanheira <span>89199</span></li>
+            <li>Rafael Tannous <span>87486</span></li>
+            <li>Yasmin Verderame <span>87023</span> </li>
+          </ul>
+
+        </div>
+
+        <div class="col imagem-mobile">
+          <img class="img-group" src="../../../assets/images/undraw_team_collaboration_re_ow29.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-answer-by-whatsapp">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Conheça nossa proposta</h2>
+        </div>
+      </div>
+      <div class="slider slider-why-answer-by-whatsapp">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="slide">
+              <a href="#banco-dados"><button class="item"> Banco de dados</button></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="slide">
+              <a href="#cloud"><button class="item">Cloud</button></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="slide">
+              <a href="#padronizacao"><button class="item">Padronização</button></a>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="slide">
+              <a href="#etl"><button class="item">ETL</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="btn btn-next" onclick="nextSlide(2)"><img src="./assets/icons/next.svg" alt=""></span>
+      <span class="btn btn-prev" onclick="prevSlide(2)"><img src="./assets/icons/prev.svg" alt=""></span>
+    </div>
+    </div>
+  </section>
+
+  <section class="plans" id="plans">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 id="banco-dados">Banco de Dados</h2>
+          <p>A primeira etapa de nossa proposta será criar uma <span>nova base de dados SQL
+              Server na nuvem</span>.
+            Modelamos sua estrutura tornando-a totalmente normalizada, evitando assim redundâncias, inconsistências e
+            possibilitando futuros crescimentos.</p>
+        </div>
+      </div>
+      <div class="items slider slider-plans">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="slide">
+              <div class="item light">
+                <h3>SQL Server</h3>
+                <span class="detail"></span>
+                <ul>
+                  <li><span>Manutenção: </span>As tabelas armazenam índice - organizado.</li>
+                  <li><span>Proteção: </span>Logins autenticados no nível da instância e no banco de dados.</li>
+                  <li><span>Suporte: </span>Fornece notas técnicas, descrições de erros, scripts, sem custo adicional.
+                  </li>
+                  <li><span>Backup: </span>Permite backups completos, parciais e incrementais</li>
+                </ul>
               </div>
             </div>
-          
-            <div id="etl" class="background">
-              <div class="pages" id="etl">
-                <div class="container">
-                  <div class="row" style="margin-bottom: 70px;">
-                    <h2 class="pages-title"  style="text-align: center;">ETL</h2>
-                    <p class="pages-p"  style="text-align: center;">Processo de ETL para que o PAN não perca dados de seus clientes cadastrados na Cli360.
-                      Formulário de confirmação de dados e o enviaremos para todos clientes da base antiga via push.</p>
-                    <div class="col-md-6">
-                      <img style="margin-top: 32px" src="./assets/images/undraw_reviewed_docs_re_9lmr.svg" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-6 item-etl">
-                      <p> <span>Padronização dos Documentos</span><br><br>
-                        Clientes que responderem terão seus dados cadastrados na nova base e, além disso, esses serão enviados
-                        para a AWS Glue como parâmetro de ETL, visando a recuperação de registros de contratações. Esses
-                        registros, caso encontrados, serão extraídos, transformados (para se adequarem às novas regras de
-                        negócio), e carregados para a nova base, sendo excluídos da Cli360 ao final do processo.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="row row-column-reverse-mobile" style="margin-bottom: 70px;">
-                    <div class="col-md-6 item-etl">
-                      <p> <span>Inteligência Artificial</span><br><br>
-                        Em relação aos clientes que não responderem o formulário após um grande período de tempo, utilizaremos
-                        seus dados como parâmetro de consultas na ‘SERPRO’, uma API que acessa e retorna dados de pessoas
-                        registrados na base da receita federal por uma determinada quantia.</p>
-                    </div>
-                    <div class="col-md-6">
-                      <img src="./assets/images/undraw_firmware_re_fgdy.svg" alt="" class="img-fluid">
-                    </div>
-                  </div>
+          </div>
+          <div class="col-md-4">
+            <div class="slide">
+              <div class="item light">
+                <h3>Oracle</h3>
+                <span class="detail"></span>
+                <ul>
+                  <li><span>Manutenção: </span>Atualização estatística automática</li>
+                  <li><span>Proteção: </span>Usuário autenticado via token de banco de dados</li>
+                  <li><span>Suporte: </span>Chamada de suporte cobrada por cada caso de suporte.</li>
+                  <li><span>Backup: </span>Backups de BD completos, nível de arquivo, incrementais e diferenciais.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="btn btn-next" onclick="nextSlide(3)"><img src="./assets/icons/next.svg" alt=""></span>
+        <span class="btn btn-prev" onclick="prevSlide(3)"><img src="./assets/icons/prev.svg" alt=""></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 id="cloud">Cloud Banco PAN</h2>
+          <p>Como citado, iremos criar uma nova database já em nuvem e o serviço que utilizaremos é o Cloud SQL for SQL
+            Server da Google. Comparamos as pioneiras da Cloud Computing e, além de ter o preço mais acessível, atende a
+            todas as necessidades que o banco Pan necessita, como:</p>
+        </div>
+      </div>
+      <div class="items">
+        <div class="item">
+          <div class="icon">
+          </div>
+          <p>Disponibilidade</p>
+        </div>
+        <div class="item">
+          <div class="icon">
+          </div>
+          <p>Disaster Recovery</p>
+        </div>
+        <div class="item">
+          <div class="icon notebook">
+          </div>
+          <p>Escalabilidade</p>
+        </div>
+        <div class="item">
+          <div class="icon">
+          </div>
+          <p>Segurança</p>
+        </div>
+        <div class="item">
+          <div class="icon">
+          </div>
+          <p>Preços</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="padronizacao" class="more-info">
+    <div class="background">
+      <div class="pages" id="padronizacao">
+        <div class="container">
+          <div class="row" style="margin-bottom: 70px;">
+            <h2 class="pages-title">Despadronização dos Dados</h2>
+            <p class="pages-p">Agora, focando na despadronização dos dados (quando os usuários inserem o mesmo tipo de
+              informação de
+              maneiras distintas), iremos fazer uma validação no front end da aplicação, utilizando máscaras, para que
+              essas cheguem no back-end já normalizados.</p>
+            <div class="col-md-6">
+              <img src="./assets/images/rest.svg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+              <p class="padronizacao-item-p"> <span class="padronizacao-item-title">Padronização dos Documentos</span><br><br>
+
+                Tratando dos documentos, começando pelo CPF, verificaremos sua validez através de seus dígitos. Já
+                outros documentos (RG e CNH) serão validados através de fotos tiradas pelo próprio cliente feitas com
+                reconhecimento de imagem.
+              </p>
+            </div>
+          </div>
+          <div class="row row-column-reverse-mobile" style="margin-bottom: 70px;">
+            <div class="col-md-6">
+              <p class="padronizacao-item-p"> <span class="padronizacao-item-title">Inteligência Artificial</span><br><br>
+
+                Isso será feito por meio de uma inteligência artificial criada com Python, que receberá o documento
+                escolhido pelo cliente, extrairá os dados desses, e cadastrar no banco. Só que, antes disso, será
+                exposto para o usuário um formulário com todos os dados inseridos para serem confirmados.</p>
+            </div>
+            <div class="col-md-6">
+              <img src="./assets/images/api.svg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="row" style="margin-bottom: 125px;">
+            <div class="col-md-6">
+              <img src="./assets/images/apirest.svg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+              <p class="padronizacao-item-p"> <span class="padronizacao-item-title">Autenticação</span><br><br>
+
+                Em relação ao e-mail e telefone, utilizaremos o método de autenticação JWT (JSON Web Token). Após ter um
+                login e senha validados pelo servidor, será criado um token que o usuário receberá em resposta e que
+                permitirá o acesso a algum recurso. Essas informações são mantidas na máquina do cliente, e não no
+                servidor (Stateless).</p>
+            </div>
+          </div>
+          <div class="row row-column-reverse-mobile" style="margin-bottom: 110px;">
+            <div class="col-md-6">
+              <p class="padronizacao-item-p"> <span class="padronizacao-item-title">Validação de Endereços</span><br><br>
+
+                Por último, no endereço, utilizaremos a API ViaCEP que valida o CEP e, caso exista, retorna dados
+                complementares do mesmo, restando ao cliente apenas inserir o número e complemento.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <img src="./assets/images/browser.svg" alt="" class="img-fluid">
+            </div>
+          </div>
+
+          <h2 class="pages-title" style="text-align: center;">Transação de dados para o Banco de Dados</h2>
+          <span class="detail"></span>
+          <p class="pages-transacao" style="text-align: center;">Para enviar esses dados para o banco de dados, usaremos REST
+            APIs, que são requisições que
+            permitem a comunicação de dados entre aplicações.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="etl" id="etl-id">
+    <div id="etl" class="background">
+      <div class="pages" id="etl">
+        <div class="container">
+          <div class="row" style="margin-bottom: 70px;">
+            <h2 class="pages-title" style="text-align: center;">ETL</h2>
+            <p class="pages-p" style="text-align: center;">Processo de ETL para que o PAN não perca dados de seus
+              clientes cadastrados na Cli360.
+              Formulário de confirmação de dados e o enviaremos para todos clientes da base antiga via push.</p>
+            <div class="col-md-6">
+              <img style="margin-top: 32px" src="./assets/images/undraw_reviewed_docs_re_9lmr.svg" alt=""
+                class="img-fluid">
+            </div>
+            <div class="col-md-6 item-etl">
+              <p> <span>Padronização dos Documentos</span><br><br>
+                Clientes que responderem terão seus dados cadastrados na nova base e, além disso, esses serão enviados
+                para a AWS Glue como parâmetro de ETL, visando a recuperação de registros de contratações. Esses
+                registros, caso encontrados, serão extraídos, transformados (para se adequarem às novas regras de
+                negócio), e carregados para a nova base, sendo excluídos da Cli360 ao final do processo.
+              </p>
+            </div>
+          </div>
+          <div class="row row-column-reverse-mobile" style="margin-bottom: 70px;">
+            <div class="col-md-6 item-etl">
+              <p> <span>Inteligência Artificial</span><br><br>
+                Em relação aos clientes que não responderem o formulário após um grande período de tempo, utilizaremos
+                seus dados como parâmetro de consultas na ‘SERPRO’, uma API que acessa e retorna dados de pessoas
+                registrados na base da receita federal por uma determinada quantia.</p>
+            </div>
+            <div class="col-md-6">
+              <img src="./assets/images/undraw_firmware_re_fgdy.svg" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+  <section class="video">
+    <div class="container">
+      <h3>Faça download dos documentos completos com a nossa proposta mais detalhada!</h3>
+      <div class="row">
+        <div class="col">
+          <div class="slider slider-video">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="slide">
+                  <a href="./assets/files/Documentacao.pdf"><button class="btn-download">Download
+                      Documentação</button></a>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="slide">
+                  <a href="./assets/files/script-ddl.txt"><button class="btn-download">Download do DDL</button></a>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="slide">
+                  <a href="./assets/files/diagrama.pdf"><button class="btn-download">Download do Diagrama</button></a>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="slide">
+                  <a href="./assets/files/apresentação the interns.pdf"><button class="btn-download">Download da
+                      Apresentação</button></a>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-          
-          <section class="video">
-            <div class="container">
-                <h3>Faça download dos documentos completos com a nossa proposta mais detalhada!</h3>
-              <div class="row">
-                <div class="col">
-                    <div class="slider slider-video">
-                      <div class="row">
-                        <div class="col-md-3">
-                          <div class="slide">
-                            <a href="./assets/files/Documentacao.pdf"><button class="btn-download">Download Documentação</button></a>
-                          </div>
-                        </div>
-                        <div class="col-md-3">
-                          <div class="slide">
-                            <a href="./assets/files/script-ddl.txt"><button class="btn-download">Download do DDL</button></a>
-                          </div>
-                        </div>
-                        <div class="col-md-3">
-                          <div class="slide">
-                            <a href="./assets/files/diagrama.pdf"><button class="btn-download">Download do Diagrama</button></a>
-                          </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="slide">
-                                <a href="./assets/files/apresentação the interns.pdf"><button class="btn-download">Download da Apresentação</button></a>
-                            </div>
-                          </div>
-                      </div>
-                    </div>  
-                  <h2>Quer conhecer mais sobre nossa proposta? Assista o vídeo.</h2>
-                  <!-- <p class="mobile-only">Entenda as vantagens de ter um Número Oficial com o Mutant Whats</p> -->
-                  <iframe width="100%" height="515" src="https://www.youtube.com/embed/bAVinJoEOZU"  frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="benefits">
-            <div class="container">
-              <div class="table-default">
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th>
-                        <h3>Nossos diferenciais:</h3>
-                      </th>
-                      <th>
-                        <h5>PANDB</h5>
-                      </th>
-                     
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Fim de redundâncias e inconsistências</td>
-                      <td><img src="./assets/images/checkmark2.svg" alt=""></td>
-                    </tr>
-                    <tr>
-                      <td>Dados verídicos </td>
-                      <td><img src="./assets/images/checkmark2.svg" alt=""></td>
-                    </tr>
-                    <tr>
-                      <td>Backups automáticos</td>
-                      <td><img src="./assets/images/checkmark2.svg" alt=""></td>
-                    </tr>
-                    <tr>
-                      <td>Segurança no acesso</td>
-                      <td><img src="./assets/images/checkmark2.svg" alt=""></td>
-                    </tr>
-                    <tr>
-                      <td>Proveito de Informações (Cli360)</td>
-                      <td><img src="./assets/images/checkmark2.svg" alt=""></td>
-                    </tr>
-                    <tr>
-                      <td>Fim do Servidor On-Premisses </td>
-                      <td><img src="./assets/images/checkmark2.svg" alt=""></td>
-                    </tr>
-                    <tr>
-                        <td>Disponibilidade de Informações</td>
-                        <td><img src="./assets/images/checkmark2.svg" alt=""></td>
-                    </tr>
-                    <tr>
-                        <td>Economia </td>
-                        <td><img src="./assets/images/checkmark2.svg" alt=""></td>
-                    </tr>
-                    <tr>
-                        <td>Maiores Lucros</td>
-                        <td><img src="./assets/images/checkmark2.svg" alt=""></td>
-                    </tr>
-                      <tr>
-                        <td>Tomadas de Decisões Acertivas </td>
-                        <td><img src="./assets/images/checkmark2.svg" alt=""></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </section>
-          
-          
-          <!-- <section class="faq">
+          <h2>Quer conhecer mais sobre nossa proposta? Assista o vídeo.</h2>
+          <!-- <p class="mobile-only">Entenda as vantagens de ter um Número Oficial com o Mutant Whats</p> -->
+          <iframe width="100%" height="515" src="https://www.youtube.com/embed/bAVinJoEOZU" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="benefits">
+    <div class="container">
+      <div class="table-default">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>
+                <h3>Nossos diferenciais:</h3>
+              </th>
+              <th>
+                <h5>PANDB</h5>
+              </th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fim de redundâncias e inconsistências</td>
+              <td><img src="./assets/images/checkmark2.svg" alt=""></td>
+            </tr>
+            <tr>
+              <td>Dados verídicos </td>
+              <td><img src="./assets/images/checkmark2.svg" alt=""></td>
+            </tr>
+            <tr>
+              <td>Backups automáticos</td>
+              <td><img src="./assets/images/checkmark2.svg" alt=""></td>
+            </tr>
+            <tr>
+              <td>Segurança no acesso</td>
+              <td><img src="./assets/images/checkmark2.svg" alt=""></td>
+            </tr>
+            <tr>
+              <td>Proveito de Informações (Cli360)</td>
+              <td><img src="./assets/images/checkmark2.svg" alt=""></td>
+            </tr>
+            <tr>
+              <td>Fim do Servidor On-Premisses </td>
+              <td><img src="./assets/images/checkmark2.svg" alt=""></td>
+            </tr>
+            <tr>
+              <td>Disponibilidade de Informações</td>
+              <td><img src="./assets/images/checkmark2.svg" alt=""></td>
+            </tr>
+            <tr>
+              <td>Economia </td>
+              <td><img src="./assets/images/checkmark2.svg" alt=""></td>
+            </tr>
+            <tr>
+              <td>Maiores Lucros</td>
+              <td><img src="./assets/images/checkmark2.svg" alt=""></td>
+            </tr>
+            <tr>
+              <td>Tomadas de Decisões Acertivas </td>
+              <td><img src="./assets/images/checkmark2.svg" alt=""></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="faq">
             <div class="container">
               <div class="row">
                 <div class="col">
@@ -478,19 +498,21 @@
               </div>
             </div>
           </section> -->
-          <footer>
-            <div class="container">
-                <ul>
-                  <li>Copyright ® 2022 All rights reserved <br> <br>
-                      The Interns</li> 
-                </ul>  
-            </div>
-          </footer>
-         
+      <a href="#" id="link-topo" title="Clique para voltar ao topo">&#9650;</a>
+  <footer>
+    <div class="container">
+      <ul>
+        <li>Copyright ® 2022 All rights reserved <br> <br>
+          The Interns</li>
+      </ul>
+    </div>
+  </footer>
 
-        <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
-        <script src="./js/main.js"></script>
-        
-    
-    </body>
+
+  <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+
+
+</body>
+
 </html>
