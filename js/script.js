@@ -11,6 +11,8 @@ function validateName(nome) {
     return nomePessoa;
 }
 
+const mediaQuery = window.matchMedia('(max-width: 768px)')
+
 function validaEmails() {
     const email = document.getElementById('email').value;
     const confirmaEmail = document.getElementById('emailConfirma').value;
