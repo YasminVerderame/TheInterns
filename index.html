@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <div class="container">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -24,10 +24,10 @@
           </button>
           <div class="collapse navbar-collapse nav" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item"><a href="./cliente-area.html"><button class="client">Exemplo Recadastro</button></a>
+              <li class="nav-item"><a href="./cliente-area.html"><button class="client">Recadastro Cliente</button></a>
               </li>
-              <li class="nav-item"><a href="./new-client.html"><button style="background-color: #00C5FF">Exemplo
-                    Cadastro</button></a></li>
+              <li class="nav-item"><a href="./new-client.html"><button style="background-color: #00C5FF">Cadastro
+                    Cliente</button></a></li>
             </ul>
           </div>
         </div>
@@ -60,6 +60,7 @@
   <section class="banco-dados" id="banco-dados">
     <div class="itemsbp">
       <div class="row">
+        <h2 class="title_bd">Banco de Dados</h2>
         <div class="col-md-6">
           <div class="itembp">
             <h4>SQL Server</h4>
@@ -100,38 +101,40 @@
       <div class="row">
         <div class="col">
           <h2 id="cloud">Cloud Banco PAN</h2>
-          <p class="cloud-p">Escolhemos o <span>Como citado, iremos criar uma nova database já em nuvem e o serviço que utilizaremos é o Cloud SQL for SQL
+          <p class="cloud-p">Como citado, iremos criar uma nova database já em nuvem e o serviço que utilizaremos é o
+            Cloud SQL for SQL
             Server da Google. Comparamos as pioneiras da Cloud Computing e, além de ter o preço mais acessível, atende a
             todas as necessidades que o banco Pan necessita, como:</p>
         </div>
+        <hr>
       </div>
-      <div class="items">
-        <div class="item">
-          <div class="icon">
-          </div>
-          <p>Disponibilidade</p>
+      <div class="cloud">
+        <h4 class="linha-abs">Disponibilidade</h4>
+        <div class="cloud-imagem">
+          <img src="/assets/images/disponibilidade.png" alt="Disponibilidade Clouds">
         </div>
-        <div class="item">
-          <div class="icon">
-          </div>
-          <p>Disaster Recovery</p>
+        <hr>
+        <h4 class="linha-abs">Disaster Recovery</h4>
+        <div class="cloud-imagem">
+          <img src="/assets/images/disasterrecovery.png" alt="Disaster Recovery Clouds">
         </div>
-        <div class="item">
-          <div class="icon notebook">
-          </div>
-          <p>Escalabilidade</p>
-        </div>
-        <div class="item">
-          <div class="icon">
-          </div>
-          <p>Segurança</p>
-        </div>
-        <div class="item">
-          <div class="icon">
-          </div>
-          <p>Preços</p>
-        </div>
+        <hr>
+        <h4 class="linha-abs">Segurança</h4>
+        <div class="cloud-imagem"><img src="/assets/images/seguranca.png" alt="Seguranças Clouds"></div>
+        <hr>
+        <h4 class="linha-abs">Escalabilidade</h4>
+        <div><img src="/assets/images/escalabilidade.png" alt="Disaster Recovery Clouds"></div>
+        <hr class="hr-cloud">
       </div>
+    </div>
+
+    </div>
+    </div>
+    <h4 class="linha-abs">Preços</h4>
+    <div class="cloud-preco">
+      <img class="cloud-imagem-preco" src="/assets/images/table-amazonrds.jpeg" alt="">
+      <img class="cloud-imagem-preco" src="/assets/images/table-azure.jpeg" alt="">
+      <img class="cloud-imagem-preco" src="/assets/images/table-cloud.jpeg" alt="">
     </div>
     </div>
   </section>
@@ -141,7 +144,7 @@
       <div class="pages" id="padronizacao">
         <div class="container center-padron">
           <div class="row" style="margin-bottom: 70px;">
-            <h2 class="pages-title">Despadronização dos Dados</h2>
+            <h2 class="title_desp_dado">Despadronização dos Dados</h2>
             <p class="pages-p">Agora, focando na despadronização dos dados (quando os usuários inserem o mesmo tipo de
               informação de
               maneiras distintas), iremos fazer uma validação no front end da aplicação, utilizando máscaras, para que
@@ -153,20 +156,24 @@
               <p class="padronizacao-item-p"> <span class="padronizacao-item-title">Padronização dos
                   Documentos</span><br><br>
 
-                Tratando dos documentos, começando pelo CPF, verificaremos sua validez através de seus dígitos. Já
-                outros documentos (RG e CNH) serão validados através de fotos tiradas pelo próprio cliente feitas com
-                reconhecimento de imagem.
+                Tratando dos documentos, começando pelo CPF, verificaremos sua validez através de seus dígitos
+                utilizando códigos em Javascript. Já outros documentos (RG e CNH) serão validados através de fotos
+                tiradas pelo próprio cliente feitas com reconhecimento de imagem através de nossa API com Python (Mais
+                informações).
               </p>
             </div>
           </div>
           <div class="row row-column-reverse-mobile" style="margin-bottom: 70px;">
             <div class="col-md-6">
-              <p class="padronizacao-item-p"> <span class="padronizacao-item-title">Inteligência
-                  Artificial</span><br><br>
+              <p class="padronizacao-item-p"> <span class="padronizacao-item-title">API de Validação
+                  Python</span><br><br>
 
-                Isso será feito por meio de uma inteligência artificial criada com Python, que receberá o documento
-                escolhido pelo cliente, extrairá os dados desses, e cadastrar no banco. Só que, antes disso, será
-                exposto para o usuário um formulário com todos os dados inseridos para serem confirmados.</p>
+                Primeiramente, o cliente escolherá um dos documentos e, em seguida, tirará uma foto. Essa, no back-end
+                da aplicação, será transformada em uma String64 e, em seguida, transportada pela nossa API dentro de um
+                código JSON. Esse código, será interpretado e seu conteúdo (String64) será utilizada para a criação da
+                imagem do documento e, a mesma, terá seu conteúdo selecionado e armazenado. Esse conteúdo será
+                padronizado, inseridos em um novo código JSON e, por fim, retornando pela API para a aplicação, restando
+                ao cliente confirmar as informações retornadas.</p>
             </div>
             <div class="col-md-6">
               <img src="./assets/images/api.svg" alt="" class="img-fluid">
@@ -199,7 +206,7 @@
             </div>
           </div>
 
-          <h2 class="pages-title" style="text-align: center;">Transação de dados para o Banco de Dados</h2>
+          <h2 class="title_etl" style="text-align: center;">Transação de dados para o Banco de Dados</h2>
           <span class="detail"></span>
           <p class="pages-transacao" style="text-align: center;">Para enviar esses dados para o banco de dados, usaremos
             REST
@@ -217,31 +224,43 @@
       <div class="pages" id="etl">
         <div class="container">
           <div class="row" style="margin-bottom: 70px;">
-            <h2 class="pages-title" style="text-align: center; margin-top: 4rem;">ETL</h2>
-            <p class="pages-p" style="text-align: center;">Processo de ETL para que o PAN não perca dados de seus
-              clientes cadastrados na Cli360.
-              Formulário de confirmação de dados e o enviaremos para todos clientes da base antiga via push.</p>
+            <h2 class="title_etl" style="text-align: center; margin-top: 4rem;">ETL</h2>
+            <p class="pages-p" style="text-align: center;">Visando um maior aproveitamento de coleta de dados para o
+              Banco PAN, incluímos ao PANDB um processo de ETL para a recuperação de dados de clientes cadastrados na
+              base de dados antiga (Cli360). Esse ocorrerá da seguinte maneira:</p>
             <div class="col-md-6">
               <img style="margin-top: 32px" src="./assets/images/undraw_reviewed_docs_re_9lmr.svg" alt=""
                 class="img-fluid">
             </div>
             <div class="col-md-6 item-etl">
-              <p class="padronizacao-item-p"> <span style="color: #FF5630;" class="padronizacao-item-title">Padronização
-                  dos Documentos</span><br><br>
-                Clientes que responderem terão seus dados cadastrados na nova base e, além disso, esses serão enviados
-                para a AWS Glue como parâmetro de ETL, visando a recuperação de registros de contratações. Esses
-                registros, caso encontrados, serão extraídos, transformados (para se adequarem às novas regras de
-                negócio), e carregados para a nova base, sendo excluídos da Cli360 ao final do processo.
+              <p class="padronizacao-item-p"> <span style="color: #FF5630;" class="padronizacao-item-title">Formulário
+                  de Confirmação</span><br><br>
+                Criaremos um formulário de reconfirmação de dados que será enviado para todos os clientes cadastrados na
+                Cli360 via push. Esses, da próxima vez que acessarem suas contas no aplicativo ou site do Banco PAN,
+                terão de responde-lo obrigatoriamente para poderem continuarem navegando. Assim que fizerem, esses dados
+                serão encaminhados para a Amazon Glue para serem utilizados de parâmetro de ETL, visando a recuperação
+                de registros de contratações e produtos. <br>
+                Esses registros, caso encontrados, serão extraídos, transformados (para se adequarem às novas regras de
+                negócio), e carregados para a nova base sendo excluídos, ao final do processo, da Cli360. Essa última
+                ação, aos poucos, permitirá Banco PAN diminuir sua infraestrutura on-premisses, permitindo sua exclusão
+                futuramente.
+
               </p>
             </div>
           </div>
           <div class="row row-column-reverse-mobile" style="margin-bottom: 70px;">
             <div class="col-md-6 item-etl">
-              <p class="padronizacao-item-p"> <span class="padronizacao-item-title" style="color: #FF5630;">Inteligência
-                  Artificial</span><br><br>
-                Em relação aos clientes que não responderem o formulário após um grande período de tempo, utilizaremos
-                seus dados como parâmetro de consultas na ‘SERPRO’, uma API que acessa e retorna dados de pessoas
-                registrados na base da receita federal por uma determinada quantia.</p>
+              <p class="padronizacao-item-p"> <span class="padronizacao-item-title" style="color: #FF5630;">Consultar
+                  Receita federal</span><br><br>
+                É inevitável que uma gama de clientes não responda ao formulário e, ao decorrer o tempo, não será
+                interessante para o Banco PAN continuar mantendo o servidor on-premisses por conta disso. Para
+                solucionarmos esse problema, utilizaremos os dados desses clientes como parâmetro para efetuar consultas
+                na SERPRO, uma API que acessa e retorna dados de pessoas registradas na base de dados da receita
+                federal. <br>
+                Cada retorno dessas consultas será cadastrado na nova base e novamente utilizado de parâmetro para um
+                novo processo de ETL que seguirá a mesma lógica da primeira, porem com alterações nos pipelines. Ao fim
+                desse processo poderemos eliminar servidor on-premisses por completo.
+              </p>
             </div>
             <div class="col-md-6">
               <img src="./assets/images/undraw_firmware_re_fgdy.svg" alt="" class="img-fluid">
@@ -264,10 +283,10 @@
             prosta <span>mais
               detalhada!</span></p>
           <div class="buttons-download">
-            <a href="/assets/files/Documentacao.pdf"><button>Download Documentação</button></a>
-            <a href="/assets/files/script-ddl.txt"><button>Download do DDL</button></a>
-            <a href="/assets/files/diagrama.pdf"><button>Download do Diagrama</button></a>
-            <a href="/assets/files/apresentação the interns.pdf"><button>Download do PPT</button></a>
+            <a href="/assets/files/Documentacao.pdf" target="_blank"><button>Documentação PanDB</button></a>
+            <a href="/assets/files/script-ddl.txt" target="_blank"><button>Comandos DDL</button></a>
+            <a href="/assets/files/diagrama.pdf" target="_blank"><button>Modelo Relacional</button></a>
+            <a href="/assets/files/Documentação Python.pdf" target="_blank"><button>API Validação Python</button></a>
           </div>
         </div>
       </div>
@@ -275,7 +294,7 @@
   </div>
 
   <div class="video">
-    <h2 class="video-title">Assista ao nosso Pitch!</h2>
+    <h2 class="video-title">PanDB: A Solução para o Banco PAN</h2>
     <iframe width="100%" height="515" src="https://www.youtube.com/embed/bAVinJoEOZU" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
