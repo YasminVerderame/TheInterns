@@ -1024,6 +1024,11 @@ input[type="submit"] {
     padding-top: 15px;
   }
 
+  header .nav ul button{
+    margin-bottom: 20px;
+    display: block ;
+  }
+
   .banner .info button {
     width: 100%;
   }
