@@ -113,6 +113,10 @@ header .navbar-toggler {
   margin-right: none ;
 }
 
+.itembp h4 {
+  text-align: center;
+}
+
 .itemsbp span {
   font-weight: 600;
   color: #29B6F6;
@@ -1123,7 +1127,7 @@ input[type="submit"] {
   header .logo img {
     margin-left: auto;
     margin-right: auto;
-    max-height: 72px;
+    max-height: 62px;
     display: block;
   }
 
