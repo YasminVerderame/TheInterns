@@ -38,7 +38,7 @@
   <section class="banner">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 nomes">
           <h1>The Interns</h1>
           <ul>
             <li>Felipe Otto <span>89108</span> </li>
@@ -57,90 +57,41 @@
     </div>
   </section>
 
-  <section class="why-answer-by-whatsapp">
-    <div class="container">
+  <section class="banco-dados" id="banco-dados">
+    <div class="itemsbp">
       <div class="row">
-        <div class="col">
-          <h2>Conheça nossa proposta</h2>
-        </div>
-      </div>
-      <div class="slider slider-why-answer-by-whatsapp">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="slide">
-              <a href="#banco-dados"><button class="item"> Banco de dados</button></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="slide">
-              <a href="#cloud"><button class="item">Cloud</button></a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="slide">
-              <a href="#padronizacao"><button class="item">Padronização</button></a>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="slide">
-              <a href="#etl"><button class="item">ETL</button></a>
-            </div>
+        <div class="col-md-6">
+          <div class="itembp">
+            <h4>SQL Server</h4>
+            <span class="detail"></span>
+            <ul>
+              <li><span>Manutenção: </span>As tabelas armazenam índice - organizado.</li>
+              <li><span>Proteção: </span>Logins autenticados no nível da instância e no banco de dados.</li>
+              <li><span>Suporte: </span>Fornece notas técnicas, descrições de erros, scripts, sem custo adicional.
+              </li>
+              <li><span>Backup: </span>Permite backups completos, parciais e incrementais</li>
+            </ul>
           </div>
         </div>
+        <div class="col-md-6">
+          <div class="itembp">
+            <h4>Oracle</h4>
+            <span class="detail"></span>
+            <ul>
+              <li><span>Manutenção: </span>Atualização estatística automática</li>
+              <li><span>Proteção: </span>Usuário autenticado via token de banco de dados</li>
+              <li><span>Suporte: </span>Chamada de suporte cobrada por cada caso de suporte.</li>
+              <li><span>Backup: </span>Backups de BD completos, nível de arquivo, incrementais e diferenciais.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="why">Escolhemos o <span>SQL Server</span> pelo fato do <span>Banco PAN</span> já utilizar este Banco
+          de Dados e poderemos reutilizar a
+          instância deles. Além deste fato, o SQL da microsoft é um dos <span>melhores do mercados</span>, e um dos
+          mais atuais,
+          assim gerando <span>confiabilidade e qualidade</span>.</p>
       </div>
-      <span class="btn btn-next" onclick="nextSlide(2)"><img src="./assets/icons/next.svg" alt=""></span>
-      <span class="btn btn-prev" onclick="prevSlide(2)"><img src="./assets/icons/prev.svg" alt=""></span>
     </div>
-    </div>
-  </section>
-
-  <section class="plans" id="plans">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h2 id="banco-dados">Banco de Dados</h2>
-          <p>A primeira etapa de nossa proposta será criar uma <span>nova base de dados SQL
-              Server na nuvem</span>.
-            Modelamos sua estrutura tornando-a totalmente normalizada, evitando assim redundâncias, inconsistências e
-            possibilitando futuros crescimentos.</p>
-        </div>
-      </div>
-      <div class="items slider slider-plans">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="slide">
-              <div class="item light">
-                <h3>SQL Server</h3>
-                <span class="detail"></span>
-                <ul>
-                  <li><span>Manutenção: </span>As tabelas armazenam índice - organizado.</li>
-                  <li><span>Proteção: </span>Logins autenticados no nível da instância e no banco de dados.</li>
-                  <li><span>Suporte: </span>Fornece notas técnicas, descrições de erros, scripts, sem custo adicional.
-                  </li>
-                  <li><span>Backup: </span>Permite backups completos, parciais e incrementais</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="slide">
-              <div class="item light">
-                <h3>Oracle</h3>
-                <span class="detail"></span>
-                <ul>
-                  <li><span>Manutenção: </span>Atualização estatística automática</li>
-                  <li><span>Proteção: </span>Usuário autenticado via token de banco de dados</li>
-                  <li><span>Suporte: </span>Chamada de suporte cobrada por cada caso de suporte.</li>
-                  <li><span>Backup: </span>Backups de BD completos, nível de arquivo, incrementais e diferenciais.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <span class="btn btn-next" onclick="nextSlide(3)"><img src="./assets/icons/next.svg" alt=""></span>
-        <span class="btn btn-prev" onclick="prevSlide(3)"><img src="./assets/icons/prev.svg" alt=""></span>
-      </div>
     </div>
   </section>
 
@@ -149,7 +100,7 @@
       <div class="row">
         <div class="col">
           <h2 id="cloud">Cloud Banco PAN</h2>
-          <p>Como citado, iremos criar uma nova database já em nuvem e o serviço que utilizaremos é o Cloud SQL for SQL
+          <p class="cloud-p">Escolhemos o <span>Como citado, iremos criar uma nova database já em nuvem e o serviço que utilizaremos é o Cloud SQL for SQL
             Server da Google. Comparamos as pioneiras da Cloud Computing e, além de ter o preço mais acessível, atende a
             todas as necessidades que o banco Pan necessita, como:</p>
         </div>

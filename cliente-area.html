@@ -8,7 +8,7 @@
   <link href="styles/style.css" rel="stylesheet">
   <script type="text/javascript" src="./js/script.js"></script>
   <link rel="stylesheet" href="./styles/bootstrap/bootstrap.min.css">
-  <title>Document</title>
+  <title>Cadastro do Cliente</title>
 
 </head>
 
@@ -18,7 +18,7 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div class="logo">
-            <a href="./index.html"><img src="./assets/logos/1563334472wpdm_banco-pan-logo.svg" class="img-fluid"
+            <a href="./index.html"><img src="./assets/logos/Logo.jpg" class="img-fluid"
                 alt="Logo Banco Pan."></a>
           </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -46,7 +46,7 @@
     <form method="get" action=".">
       <h4>Dados pessoais</h4>
       <div class="input-group">
-        <input type="text" placeholder="Nome completo" class="input" required>
+        <input type="text" placeholder="Nome completo" class="input" id="name" required onblur="validateName(this)">
         <span class="border-bottom"></span>
       </div>
 
@@ -69,14 +69,15 @@
       </div>
 
       <div class="input-group">
-        <input type="text" placeholder="E-mail" class="input" required>
+        <input type="text" placeholder="E-mail" class="input" id="email" required onblur="validaEmails(this)">
         <span class="border-bottom"></span>
       </div>
 
       <div class="input-group">
-        <input type="text" placeholder="Confirme seu E-mail" class="input" required>
+        <input type="text" placeholder="Confirme seu E-mail" class="input" id="emailConfirma" required onblur="validaEmails(this)">
         <span class="border-bottom"></span>
       </div>
+      <p id="confirmEmail">Os emails não coincidem.</p>
 
     </form>
 
@@ -87,6 +88,7 @@
           maxlength="9" onblur="pesquisacep(this.value);" oninput="mascara(this, 'cep')">
         <span class="border-bottom"></span>
       </div>
+      <p id="isValidCEP">CEP não encontrado.</p>
 
       <div class="input-group">
         <input type="text" placeholder="Rua" class="input" id="rua" size="60" disabled>
@@ -114,7 +116,7 @@
       </div>
 
       <div class="input-group">
-        <input type="text" placeholder="Complemento" class="input" id="ibge" size="8" disabled>
+        <input type="text" placeholder="Complemento" class="input" id="ibge" size="8">
         <span class="border-bottom"></span>
       </div>
 

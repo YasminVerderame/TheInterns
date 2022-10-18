@@ -2,8 +2,24 @@ function ValidaCPF() {
     var cpfValido = /^(([0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2})|([0-9]{11}))$/;
 }
 
-function maskCEP(cep) {
-    let cepValido = /^[0-9]{5}-[0-9]{3}$/;
+function validateName(nome) {
+    const nomePessoa = nome.toString().split(' ');
+    console.log(nomePessoa);
+    nomePessoa.map((nome) => { 
+        return nome[0].toUpperCase() + nome.substring(1); 
+    }).join(" ");
+    return nomePessoa;
+}
+
+function validaEmails() {
+    const email = document.getElementById('email').value;
+    const confirmaEmail = document.getElementById('emailConfirma').value;
+
+    if (email === '' || confirmaEmail === '')
+        document.getElementById('confirmEmail').style.display = 'none';
+
+    email !== confirmaEmail ? document.getElementById('confirmEmail').style.display = 'block' : document.getElementById('confirmEmail').style.display = 'none';
+
 }
 
 function cpfCheck(el) {
@@ -166,7 +182,7 @@ function meu_callback(conteudo) {
     else {
         //CEP não Encontrado.
         limpa_formulário_cep();
-        alert("CEP não encontrado.");
+        document.getElementById('isValidCEP').style.display = 'block';
     }
 }
 
