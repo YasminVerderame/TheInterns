@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>The Interns</title>
+  <title>The Interns - PANDB</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="styles/style.css" rel="stylesheet">
@@ -24,7 +24,7 @@
           </button>
           <div class="collapse navbar-collapse nav" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item"><a href="./cliente-area.html"><button class="client">Recadastro Cliente</button></a>
+              <li class="nav-item"><a href="./cliente-area.html"><button class="client">Atualização de dados</button></a>
               </li>
               <li class="nav-item"><a href="./new-client.html"><button style="background-color: #00C5FF">Cadastro
                     Cliente</button></a></li>
@@ -50,9 +50,9 @@
 
         </div>
 
-        <div class="col imagem-mobile">
-          <img class="img-group" src="../../../assets/images/undraw_team_collaboration_re_ow29.svg" alt="">
-        </div>
+        <!-- <div class="col imagem-mobile">
+          <img class="img-group" src="/assets/images/undraw_team_collaboration_re_ow29.svg" alt="">
+        </div> -->
       </div>
     </div>
   </section>
@@ -111,19 +111,19 @@
       <div class="cloud">
         <h4 class="linha-abs">Disponibilidade</h4>
         <div class="cloud-imagem">
-          <img src="/assets/images/disponibilidade.png" alt="Disponibilidade Clouds">
+          <img src="./assets/images/disponibilidade.png" alt="Disponibilidade Clouds">
         </div>
         <hr>
         <h4 class="linha-abs">Disaster Recovery</h4>
         <div class="cloud-imagem">
-          <img src="/assets/images/disasterrecovery.png" alt="Disaster Recovery Clouds">
+          <img src="./assets/images/disasterrecovery.png" alt="Disaster Recovery Clouds">
         </div>
         <hr>
         <h4 class="linha-abs">Segurança</h4>
-        <div class="cloud-imagem"><img src="/assets/images/seguranca.png" alt="Seguranças Clouds"></div>
+        <div class="cloud-imagem"><img src="./assets/images/seguranca.png" alt="Seguranças Clouds"></div>
         <hr>
         <h4 class="linha-abs">Escalabilidade</h4>
-        <div><img src="/assets/images/escalabilidade.png" alt="Disaster Recovery Clouds"></div>
+        <div><img src="./assets/images/escalabilidade.png" alt="Disaster Recovery Clouds"></div>
         <hr class="hr-cloud">
       </div>
     </div>
@@ -132,9 +132,9 @@
     </div>
     <h4 class="linha-abs">Preços</h4>
     <div class="cloud-preco">
-      <img class="cloud-imagem-preco" src="/assets/images/table-amazonrds.jpeg" alt="">
-      <img class="cloud-imagem-preco" src="/assets/images/table-azure.jpeg" alt="">
-      <img class="cloud-imagem-preco" src="/assets/images/table-cloud.jpeg" alt="">
+      <img class="cloud-imagem-preco" src="./assets/images/table-amazonrds.jpeg" alt="">
+      <img class="cloud-imagem-preco" src="./assets/images/table-azure.jpeg" alt="">
+      <img class="cloud-imagem-preco" src="./assets/images/table-cloud.jpeg" alt="">
     </div>
     </div>
   </section>
@@ -362,104 +362,6 @@
     </div>
   </section>
 
-
-  <!-- <section class="faq">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <h2>Tire suas dúvidas</h2>
-                  <div class="accordion" id="accordionFaq">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="heading1">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1" >
-                          Por que preciso deletar a minha conta do Whatsapp?
-                        </button>
-                      </h2>
-                      <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1">
-                        <div class="accordion-body">
-                          <p>É necessário deletar a sua conta do seu celular porque o número não pode ficar ativo simultaneamente em mais de um local. Para que nossa plataforma consiga ativar seu número, é necessário desconectar do serviço atual.</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="heading2">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                          Posso usar o mesmo número que já tenho no WhatsApp?
-                        </button>
-                      </h2>
-                      <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2">
-                        <div class="accordion-body">
-                          <p>Sim, porém, você terá que apagar do seu celular para que possamos transferir o número para a plataforma do Mutant Whats.</p>
-                        </div>
-                      </div>
-                    </div>
-        
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="heading3">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3" (click)="tagManager.addDataLayer('mutant-whats:home', 'clique:botao', 'fac:ler-mais')">
-                          Quanto tempo ficarei sem meu número?
-                        </button>
-                      </h2>
-                      <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3">
-                        <div class="accordion-body">
-                          <p>Hoje o tempo de ativação exibido no site é de até 1 dia útil.</p>
-                        </div>
-                      </div>
-                    </div>
-        
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="heading4">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4" (click)="tagManager.addDataLayer('mutant-whats:home', 'clique:botao', 'fac:ler-mais')">
-                          Eu perco meu histórico de conversas?
-                        </button>
-                      </h2>
-                      <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4">
-                        <div class="accordion-body">
-                          <p>Sim, ainda não é possível migrar o histórico de conversas para o Mutant Whats.</p>
-                        </div>
-                      </div>
-                    </div>
-        
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="heading5">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5" (click)="tagManager.addDataLayer('mutant-whats:home', 'clique:botao', 'fac:ler-mais')"> 
-                          Posso importar minha agenda de contatos?
-                        </button>
-                      </h2>
-                      <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5">
-                        <div class="accordion-body">
-                          <p>Sim, por meio de uma planilha do excel é possível importar agenda.</p>
-                        </div>
-                      </div>
-                    </div>
-        
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="heading6">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6" (click)="tagManager.addDataLayer('mutant-whats:home', 'clique:botao', 'fac:ler-mais')">
-                          As conversas que estão ativas, ficarão ativas na plataforma durante esse processo de ativação?
-                        </button>
-                      </h2>
-                      <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6">
-                        <div class="accordion-body">
-                          <p>Não, como a migração do histórico ainda não é possível, você precisará iniciar as conversas novamente.</p>
-                        </div>
-                      </div>
-                    </div>
-        
-                   
-                 
-                   
-        
-             
-        
-                    
-        
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> -->
   <a href="#" id="link-topo" title="Clique para voltar ao topo">&#9650;</a>
   <footer>
     <div class="container">
